@@ -1,5 +1,5 @@
 h1 {
-    color:rgb(41, 191, 201);
+    color:rgb(56, 49, 42);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
@@ -14,7 +14,7 @@ h1 {
     background-color: rgb(235, 175, 175);
     margin-left:  100px;
     width: 800px;
-    padding: 0px 49px 50px 49px;
+    padding: 25px 49px 25px 49px;
     line-height: 1.5;
 
     img {
@@ -34,11 +34,13 @@ h1 {
     display: flex;
     gap: 6%;
     width: 100%;
-    padding-left: 0px;
+    
 }
 
 .serveringsförslag img {
     width: 47%;
     object-fit: cover;
+    margin-left: 0px;
+
 }
 
