@@ -1,46 +1,195 @@
-h1 {
-    color:rgb(56, 49, 42);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.bakgrund {
-    background-color: bisque;
-    width: 1100px;
-    padding-bottom: 50px;
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
 }
 
-.innehåll {
-    background-color: rgb(235, 175, 175);
-    margin-left:  100px;
-    width: 800px;
-    padding: 25px 49px 25px 49px;
-    line-height: 1.5;
+html {
+    scrollbar-gutter: stable;
+    background-color: oklch(from plum l c -120deg);
+}
 
-    img {
-        width: 900px;
-        margin-left: -50px;
+.background {
+    background-color: plum;
+}
+
+img,
+picture,
+svg,
+video {
+    display: inline-block;
+    max-width: 100%;
+}
+
+header {
+
+    margin-bottom: 1rem;
+
+    h1 {
+        font-family: monospace;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .bild-stor {
+        width: 1200px;
+        max-width: 100%;
     }
 }
 
-
-
-.underrubrik {
-    padding: 10px;
-    background-color: lightgray;
-}
-
-.serveringsförslag {
+body {
+    min-block-size: 100 svh;
+    min-height: 100vh;
     display: flex;
-    gap: 6%;
-    width: 100%;
+    justify-content: center;
+    line-height: 1.6lh;
+
+
+
+}
+
+main {
+    margin-block: 1em;
+    font-family: sans-serif;
+     
+    h1,h2,h3 {
+        margin: 1rem;
+        margin-bottom: 0;
+    }
+
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    ul,
+    ol {
+        list-style-position: inside;
+        padding-inline-start: 1rem;
+    }
+
+    ul {
+        list-style-type: disc;
+
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    .contents {
+
+        width: 1200px;
+        display: inline-block;
+
+
+        .sub-heading {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: oklch(from plum l 0.05 -60deg);
+
+        }
+
+        .recipie {
+            background-color: oklch(from plum l c 20deg);
+            padding: 0.5 rem;
+            margin: 1rem 0rem 1rem 0rem;
+            line-height: 2;
+            text-wrap-style: pretty;
+
+            p {
+                margin-left: 1rem;
+            }
+
+            li:hover {
+                font-weight: bolder;
+                background-color: oklch(
+                    from plum l c
+                    calc((sibling-index() - 1) * 20deg))
+                
+
+            }
+        }
+
+        .serving-suggestion {
+            display: flex;
+            gap: 6%;
+            max-width: 100%;
+
+            img {
+                max-width: 47%;
+                object-fit: cover;
+            }
+        }
+
+
+
+    }
+
+    /* main {
+
+    h1 {
+    color:rgb(56, 49, 42);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
-}
+    }
 
-.serveringsförslag img {
-    width: 47%;
-    object-fit: cover;
-    margin-left: 0px;
+    .background {
+        background-color: bisque;
+        width: 1100px;
+        padding-bottom: 50px;
+    }
 
-}
+    .contents,
+    .header {
+        background-color: rgb(235, 175, 175);
+        margin-left:  100px;
+        width: 800px;
+        padding: 25px 49px 25px 49px;
+        line-height: 1.5;
 
+        img {
+            width: 900px;
+            margin-left: -50px;
+            max-width: 100%;
+        }
+    }
+
+
+
+    .underrubrik {
+        padding: 10px;
+        background-color: lightgray;
+    }
+
+    .serveringsförslag {
+        display: flex;
+        gap: 6%;
+        width: 100%;
+        
+    }
+
+    .serveringsförslag img {
+        width: 47%;
+        object-fit: cover;
+        margin-left: 0px;
+
+    }
+
+} */
