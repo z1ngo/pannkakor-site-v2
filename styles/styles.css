@@ -11,15 +11,18 @@
     margin: 0;
     padding: 0;
     font: inherit;
+    --favourite-color: plum;
+    --funny-cursor: 🤪;
+    
 }
 
 html {
     scrollbar-gutter: stable;
-    background-color: oklch(from plum l c -120deg);
+    background-color: oklch(from var(--favourite-color) l c -120deg);
 }
 
 .background {
-    background-color: plum;
+    background-color: var(--favourite-color);
 }
 
 img,
@@ -40,6 +43,55 @@ header {
         font-weight: bold;
     }
 
+    
+
+    .main-menu {
+        
+
+        ul {
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: oklch(from var(--favourite-color) l 0.1 -60deg);
+            
+
+            li {
+                float: left;
+                border-right: 2.5px solid oklch(from var(--favourite-color) 0.8 c -180deg);
+                
+
+                +:last-of-type {
+                    float: right;
+                    border-right: none;
+                }
+
+                &:hover {
+                    background-color: oklch(from var(--favourite-color) l c 20deg);
+                    cursor:
+                        url("/images/moose-icon-32.png"),
+                        auto;
+                    
+                    
+                    
+                }
+
+                a {
+                    display: block;
+                    color: black;
+                    text-align: center;
+                    padding: 1rem 1rem;
+                    text-decoration: none;
+                }
+                
+            }
+
+            
+        }
+    }
+    
     .bild-stor {
         width: 1200px;
         max-width: 100%;
