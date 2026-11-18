@@ -1,247 +1,161 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
-    --favourite-color: plum;
-    
-    
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	--favourite-color: plum;
 }
 
 html {
-    scrollbar-gutter: stable;
-    background-color: oklch(from var(--favourite-color) l c -120deg);
+	scrollbar-gutter: stable;
+	background-color: oklch(from var(--favourite-color) l c -120deg);
 }
 
 .background {
-    background-color: var(--favourite-color);
+	background-color: var(--favourite-color);
 }
 
 img,
 picture,
 svg,
 video {
-    display: inline-block;
-    max-width: 100%;
+	display: inline-block;
+	max-width: 100%;
 }
 
 header {
+	margin-bottom: 1rem;
 
-    margin-bottom: 1rem;
+	h1 {
+		font-family: monospace;
+		font-size: 3rem;
+		font-weight: bold;
+	}
 
-    h1 {
-        font-family: monospace;
-        font-size: 3rem;
-        font-weight: bold;
-    }
-
-    
-
-    .main-menu {
-        
-
-        ul {
-            font-weight: bold;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: oklch(from var(--favourite-color) l 0.1 -60deg);
-            
-
-            li {
-                float: left;
-                border-right: 2.5px solid oklch(from var(--favourite-color) 0.8 c -180deg);
-                
-
-                +:last-of-type {
-                    float: right;
-                    border-right: none;
-                }
-
-                &:hover {
-                    background-color: oklch(from var(--favourite-color) l c 20deg);
-                    cursor:
-                        url("/images/moose-icon-32.png"),
-                        auto;
-                    
-                    
-                    
-                }
-
-                a {
-                    display: block;
-                    color: black;
-                    text-align: center;
-                    padding: 1rem 1rem;
-                    text-decoration: none;
-                }
-                
-            }
-
-            
-        }
-    }
-    
-    .bild-stor {
-        width: 1200px;
-        max-width: 100%;
-    }
+	.bild-stor {
+		width: 1200px;
+		max-width: 100%;
+	}
 }
+/* .main-menu {
+	display: flex;
+} */
+.nav-links {
+	/* float: left; */
+	display: flex;
+	font-weight: bold;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	list-style-type: none;
+	background-color: oklch(from var(--favourite-color) l 0.1 -60deg);
 
+	li {
+		border-right: 2.5px solid oklch(from var(--favourite-color) 0.8 c -180deg);
+
+		&:last-of-type {
+			border-right: none;
+			margin-inline-start: auto;
+		}
+	}
+
+	a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 1rem 1rem;
+		text-decoration: none;
+
+		&:hover {
+			background-color: oklch(from var(--favourite-color) l c 20deg);
+			cursor: url("/images/moose-icon-32.png"), auto;
+		}
+	}
+}
 body {
-    min-block-size: 100 svh;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    line-height: 1.6lh;
-
-
-
+	min-block-size: 100 svh;
+	min-height: 100vh;
+	width: 100ch;
+	line-height: 1.6lh;
 }
 
 main {
-    margin-block: 1em;
-    font-family: sans-serif;
-     
-    h1,h2,h3 {
-        margin: 1rem;
-        margin-bottom: 0;
-    }
+	margin-block: 1em;
+	font-family: sans-serif;
 
+	h1,
+	h2,
+	h3 {
+		margin: 1rem;
+		margin-bottom: 0;
+	}
 
-    h2 {
-        font-size: 1.4rem;
-        font-weight: bold;
-    }
+	h2 {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
 
-    h3 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        font-style: italic;
-    }
+	h3 {
+		font-size: 1.2rem;
+		font-weight: bold;
+		font-style: italic;
+	}
 
-    ul,
-    ol {
-        list-style-position: inside;
-        padding-inline-start: 1rem;
-    }
+	ul,
+	ol {
+		list-style-position: inside;
+		padding-inline-start: 1rem;
+	}
 
-    ul {
-        list-style-type: disc;
+	ul {
+		list-style-type: disc;
+	}
 
-    }
+	ol {
+		list-style-type: decimal;
+	}
+}
+.contents {
+	width: 1200px;
+	display: inline-block;
+}
 
-    ol {
-        list-style-type: decimal;
-    }
+.sub-heading {
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: oklch(from plum l 0.05 -60deg);
+}
 
-    .contents {
+.recipie {
+	background-color: oklch(from plum l c 20deg);
+	padding: 0.5 rem;
+	margin: 1rem 0rem 1rem 0rem;
+	line-height: 2;
+	text-wrap-style: pretty;
 
-        width: 1200px;
-        display: inline-block;
+	p {
+		margin-left: 1rem;
+	}
 
+	li:hover {
+		font-weight: bolder;
+		background-color: oklch(from plum l c calc((sibling-index() - 1) * 20deg));
+	}
+}
 
-        .sub-heading {
-            font-size: 1.2rem;
-            font-weight: bold;
-            background-color: oklch(from plum l 0.05 -60deg);
+.serving-suggestion {
+	display: flex;
+	gap: 6%;
+	max-width: 100%;
 
-        }
-
-        .recipie {
-            background-color: oklch(from plum l c 20deg);
-            padding: 0.5 rem;
-            margin: 1rem 0rem 1rem 0rem;
-            line-height: 2;
-            text-wrap-style: pretty;
-
-            p {
-                margin-left: 1rem;
-            }
-
-            li:hover {
-                font-weight: bolder;
-                background-color: oklch(
-                    from plum l c
-                    calc((sibling-index() - 1) * 20deg))
-                
-
-            }
-        }
-
-        .serving-suggestion {
-            display: flex;
-            gap: 6%;
-            max-width: 100%;
-
-            img {
-                max-width: 47%;
-                object-fit: cover;
-            }
-        }
-
-
-
-    }
-
-    /* main {
-
-    h1 {
-    color:rgb(56, 49, 42);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    }
-
-    .background {
-        background-color: bisque;
-        width: 1100px;
-        padding-bottom: 50px;
-    }
-
-    .contents,
-    .header {
-        background-color: rgb(235, 175, 175);
-        margin-left:  100px;
-        width: 800px;
-        padding: 25px 49px 25px 49px;
-        line-height: 1.5;
-
-        img {
-            width: 900px;
-            margin-left: -50px;
-            max-width: 100%;
-        }
-    }
-
-
-
-    .underrubrik {
-        padding: 10px;
-        background-color: lightgray;
-    }
-
-    .serveringsförslag {
-        display: flex;
-        gap: 6%;
-        width: 100%;
-        
-    }
-
-    .serveringsförslag img {
-        width: 47%;
-        object-fit: cover;
-        margin-left: 0px;
-
-    }
-
-} */
+	img {
+		max-width: 47%;
+		object-fit: cover;
+	}
+}
