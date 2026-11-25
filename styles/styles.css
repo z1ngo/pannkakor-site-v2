@@ -24,6 +24,8 @@ html {
 
 .background {
 	background-color: var(--favourite-color);
+	border: 0;
+	padding: 0;
 }
 
 img,
@@ -86,6 +88,7 @@ body {
 main {
 	margin-block: 1em;
 	font-family: sans-serif;
+	background-color: bisque;
 
 	h1,
 	h2,
@@ -149,7 +152,7 @@ main {
 
     .logo-container {
 
-        h1 {
+        h1,h2 {
             font-size: 10vh;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             color: beige;
@@ -157,6 +160,8 @@ main {
             line-height: 1.3;
             
         }
+
+		h2 {font-size: 3vh;}
 
         background-color: rgba(0, 0, 0, 0.548);
         backdrop-filter: blur(2px);
@@ -168,12 +173,56 @@ main {
         
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        
-
-        
-        
+                     
     }
 }
+
+.recipe-cards-container {
+	margin-block-start: 1rem;
+	padding-block-start: 1rem;
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	gap: 1.5rem;
+	
+}
+
+.recipe-card {
+	display: grid;
+	grid-template-rows: subgrid;
+	background-color: plum;
+	grid-row: span 4;
+	padding: 2rem;
+	border-radius: 10px;
+
+	
+
+	img {
+		aspect-ratio: 1/1;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.tags-pill {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+	p {
+		background:beige;
+		padding: 1rem;
+		border: 0.2rem solid rgb(170, 51, 170);
+		border-radius: 20px;
+		line-height: 1.2;
+		flex: 0 1 auto;
+		
+	}
+	
+}
+
 
 .recipie {
 	background-color: oklch(from plum l c 20deg);
@@ -194,7 +243,7 @@ main {
 		font-size: 3rem;
 		font-weight: bold;
         margin: none;
-        	}
+    }
 
 	p {
 		margin-left: 1rem;
