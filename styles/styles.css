@@ -187,9 +187,11 @@ main {
 	align-items: center;
 	gap: 1.5rem;
 	
+	
 }
 
 .recipe-card {
+	text-decoration: none;
 	display: grid;
 	grid-template-rows: subgrid;
 	background-color: plum;
