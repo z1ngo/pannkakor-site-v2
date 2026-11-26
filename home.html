@@ -74,7 +74,7 @@
                         <fieldset class="recipe-name">
                             <legend>Om receptet</legend>
                                 <div>
-                                    <label for="recipe-name">Receptets namn</label>
+                                    <label for="recipe-name">Receptets namn *</label>
                                     <input type="text" id="recipe-name" name="recipe-name" required>
                                 </div>
 
@@ -91,15 +91,49 @@
                                </div>
                                
                             <div class="flex-div">
-                                <label for="time-required">Tid i minuter</label>
-                                <input type="text" id="time-required" name="time-required">
+                                <div class="input-group">
+                                    <label for="time-required">Tid i minuter</label>
+                                    <input type="text" id="time-required" name="time-required">
+                                </div>
 
-                                <label for="number-portions">Antal portioner</label>
-                                <input type="text" id="number-portions" name="number portions">
+                                <div class="input-group">
+                                    <label for="number-portions">Antal portioner</label>
+                                    <input type="text" id="number-portions" name="number portions">
+                                </div>
                             </div>
                                
                         </fieldset>
 
+                        <fieldset class="difficulty">
+                            <legend>Svårighetsgrad</legend>
+                                <div>
+                                    <label for="difficulty">Lätt</label>
+                                    <input type="radio" id="easy" value="easy" name="difficulty">
+                                </div>
+
+                                <div>
+                                    <label for="difficulty">Medel</label>
+                                    <input type="radio" id="medium" value="medium" name="difficulty">
+                                </div>
+
+                                <div>
+                                    <label for="difficulty">Svårt</label>
+                                    <input type="radio" id="hard" value="hard" name="difficulty">
+                                </div>
+                        </fieldset>
+
+                        <fieldset class="ingredients-instructions">
+                            <legend>Receptet</legend>
+                            <div>
+                                <label for="ingredients">Ingredienser *</label>
+                                <textarea id="ingredients" name="ingredients" required placeholder="Fyll i dina ingredienser"></textarea>
+                            </div>
+
+                            <div>
+                                <label for="instrucions">Instruktioner *</label>
+                                <textarea id="instructions" name="instructions" placeholder="Fyll i dina tillagninsinstruktioner" required ></textarea>
+                            </div>
+                        </fieldset>
                         <button type="submit">Skicka ditt recept</button>
                     </form>
                 </section>
