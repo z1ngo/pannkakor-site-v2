@@ -331,10 +331,11 @@ main {
 	
 	margin-block: 1rem;
 	line-height: 2;
-	text-wrap-style: pretty;
+	/* text-wrap-style: pretty; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, min(100%,500px));
+	justify-content: center;
+	
     
 
     gap: 1rem;
@@ -396,10 +397,13 @@ main {
 	gap: 6%;
 	max-width: 100%;
 	flex-wrap: wrap;
+	
 
 	img {
 		max-width: 47%;
 		object-fit: cover;
+		flex: 0 1 300px;
+		
 	}
 }
 
