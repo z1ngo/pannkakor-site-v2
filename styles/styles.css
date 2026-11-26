@@ -225,6 +225,41 @@ main {
 	
 }
 
+.form-container {
+	margin-block-start: 2rem;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+
+
+	h1,h2 {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+	}
+	h1 {
+		font-size: 2rem;
+		margin-block-end: 1rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin-block-end: 1rem;
+	}
+
+	fieldset {
+		padding: 0.5rem;
+		
+		option:not([value=""]) {
+			padding: 0.2rem;
+			font-weight: bold;
+		}
+	}
+
+	.flex-div {
+		display: flex;
+	}
+	
+}
 
 .recipie {
 	background-color: oklch(from plum l c 20deg);

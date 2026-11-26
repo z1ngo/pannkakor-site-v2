@@ -67,6 +67,42 @@
 
 
                 </section>
+                <section class="form-container">
+                    <h1>Dela ditt recept!</h1>
+                    <h2>Vi tar tacksamt emot ditt recept till vår ständigt växande databas</h2>
+                    <form action="" method="get">
+                        <fieldset class="recipe-name">
+                            <legend>Om receptet</legend>
+                                <div>
+                                    <label for="recipe-name">Receptets namn</label>
+                                    <input type="text" id="recipe-name" name="recipe-name" required>
+                                </div>
+
+                               <div>
+                                <label for="category">Kategori</label>
+                                <select name="category" id="category">
+                                    <option value="">Välj en kategori</option>
+                                    <option value="Frukost">Frukost</option>
+                                    <option value="Middag">Middag</option>
+                                    <option value="Lunch">Lunch</option>
+                                    <option value="Knytkalas">Knytkalas</option>
+                                    <option value="Fika">Fika</option>
+                                </select>
+                               </div>
+                               
+                            <div class="flex-div">
+                                <label for="time-required">Tid i minuter</label>
+                                <input type="text" id="time-required" name="time-required">
+
+                                <label for="number-portions">Antal portioner</label>
+                                <input type="text" id="number-portions" name="number portions">
+                            </div>
+                               
+                        </fieldset>
+
+                        <button type="submit">Skicka ditt recept</button>
+                    </form>
+                </section>
             </main>
         </div>
     </body>
